@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Personal - Adolfo A. Díaz-Bautista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --roman-red: #7f1d1d;
+            --slate-dark: #1e293b;
+            --gold: #d97706;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        h1, h2, .roman-font {
+            font-family: 'Cinzel', serif;
+        }
+        .serif-text {
+            font-family: 'Merriweather', serif;
+        }
+        
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] > summary {
+            margin-bottom: 0.5rem;
+        }
+        details[open] > summary .icon-rotate {
+            transform: rotate(180deg);
+        }
+        
+        .nested-details[open] > summary {
+            color: #7f1d1d;
+            font-weight: bold;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        details[open] > div {
+            animation: slideDown 0.3s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .citation-box {
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+            margin-bottom: 0.6rem;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+        }
+        .citation-box:hover {
+            border-left-color: #7f1d1d;
+            background-color: #f1f5f9;
+        }
+        .year-badge {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #7f1d1d;
+            background-color: #fee2e2;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.2rem;
+            margin-right: 0.3rem;
+        }
+        .translation-note {
+            margin-top: 0.2rem;
+            padding-left: 0.5rem;
+            border-left: 2px solid #94a3b8;
+            font-size: 0.75rem;
+            color: #475569;
+            font-style: italic;
+        }
+        .metrics-badge {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-2 px-2 md:py-6 md:px-4">
+
+    <div class="transform scale-125 origin-top w-full flex flex-col items-center pb-[25vh]">
+        
+        <div class="w-[80%] max-w-6xl bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-200">
+
+    <div class="w-full max-w-6xl bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-200">
+        
+        <header class="bg-slate-900 text-white p-4 md:p-6 border-b-4 border-red-800 relative">
+            <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl md:text-8xl font-serif">SPQR</div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 relative z-10 mb-6 text-center md:text-left">
+                
+                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full md:w-auto">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-red-800 shadow-lg overflow-hidden bg-slate-200 flex-shrink-0 relative">
+                        <img src="foto_perfil.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Adolfo Díaz-Bautista" class="w-full h-full object-cover">
+                        <div class="hidden w-full h-full flex items-center justify-center bg-slate-300 text-slate-500 absolute top-0 left-0">
+                            <i class="fas fa-user text-4xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col">
+                        <h1 class="text-xl md:text-4xl font-bold tracking-wider leading-tight">Adolfo A. Díaz-Bautista Cremades</h1>
+                        <p class="text-red-200 text-sm md:text-lg uppercase tracking-widest mt-2 md:mt-1 font-semibold">Profesor Titular de Derecho Romano</p>
+                        <p class="text-slate-400 text-xs mt-1">Departamento de Derecho Privado | Universidad de Murcia</p>
+                        
+                        <div class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-3 mt-3 text-xs text-red-200/80 items-center">
+                            <a href="mailto:adiaz-bautista@um.es" class="hover:text-white transition-colors flex items-center gap-1">
+                                <i class="fas fa-envelope"></i> adiaz-bautista@um.es
+                            </a>
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-phone"></i> 868 88 31 03
+                            </span>
+                            
+                            <div class="flex gap-4 md:ml-2 items-center md:border-l border-red-800/80 md:pl-4">
+                                <a href="https://www.linkedin.com/in/adolfo-d%C3%ADaz-bautista-35040922/" target="_blank" class="hover:text-[#0A66C2] transition-colors" title="LinkedIn">
+                                    <i class="fab fa-linkedin text-lg"></i>
+                                </a>
+                                <a href="https://orcid.org/0000-0002-9234-6302" target="_blank" class="hover:text-[#A6CE39] transition-colors" title="ORCID">
+                                    <i class="fab fa-orcid text-lg"></i>
+                                </a>
+                                <a href="https://scholar.google.es/citations?user=PXQ8ZQUAAAAJ&hl=es" target="_blank" class="hover:text-[#4285F4] transition-colors" title="Google Scholar">
+                                    <i class="fas fa-graduation-cap text-lg"></i>
+                                </a>
+                                <a href="https://www.researchgate.net/profile/Adolfo-Diaz-Bautista-Cremades?ev=hdr_xprf" target="_blank" class="hover:text-[#00CBCE] transition-colors" title="ResearchGate">
+                                    <i class="fab fa-researchgate text-lg"></i>
+                                </a>
+                                <a href="https://um-es.academia.edu/AdolfoAntonioD%C3%ADazBautistaCremades" target="_blank" class="hover:text-white transition-colors font-serif font-bold text-lg" title="Academia.edu">
+                                    A
+                                </a>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+                
+ <div class="flex gap-2 mt-2 md:mt-0 w-full md:w-auto justify-center">
+                    <a href="" target="_blank" class="metrics-badge bg-red-900/30 border-red-500/30 flex-1 md:flex-none min-w-[100px] hover:bg-red-800/50 transition-colors block cursor-pointer" title="Ver resolución de sexenios">
+                        <div class="text-lg md:text-xl text-yellow-500 font-bold">2</div>
+                        <div class="text-[9px] uppercase leading-tight text-white">Sexenios<br>(2012-24)</div>
+                    </a>
+                    <a href="" target="_blank" class="metrics-badge bg-red-900/30 border-red-500/30 flex-1 md:flex-none min-w-[100px] hover:bg-red-800/50 transition-colors block cursor-pointer" title="Ver certificado de acreditación">
+                        <div class="text-lg md:text-xl text-yellow-500 font-bold"><i class="fas fa-check"></i></div>
+                        <div class="text-[9px] uppercase leading-tight text-white">Acreditado<br>TU</div>
+                    </a>
+                </div>
+            </div> <div class="flex justify-between items-center border-t border-slate-700 pt-4 relative z-10">
+                <div class="text-center flex-1">
+                    <span class="block text-2xl md:text-4xl font-bold text-yellow-500">109</span>
+                    <span class="text-[10px] md:text-xs text-slate-300 uppercase tracking-wider font-bold">Publicaciones</span>
+                    <p class="text-[8px] md:text-[9px] text-slate-500 mt-0.5">Fuente: Google Scholar</p>
+                </div>
+                
+                <div class="h-8 w-px bg-slate-700 mx-2"></div>
+                
+                <div class="text-center flex-1 opacity-90">
+                    <span class="block text-lg md:text-xl font-bold text-white">139</span>
+                    <span class="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider">Citas</span>
+                    <p class="text-[8px] md:text-[9px] text-slate-500 mt-0.5">Google Scholar</p>
+                </div>
+                
+                <div class="h-8 w-px bg-slate-700 mx-2"></div>
+
+                <div class="text-center flex-1 opacity-90">
+                    <span class="block text-lg md:text-xl font-bold text-white">6</span>
+                    <span class="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider">Índice H</span>
+                    <p class="text-[8px] md:text-[9px] text-slate-500 mt-0.5">Google Scholar</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="divide-y divide-slate-200 bg-slate-50">
+
+            <details class="group bg-white" open>
+                <summary class="flex justify-between items-center p-4 md:p-5 hover:bg-slate-50">
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <span class="w-8 h-8 rounded-full bg-red-100 text-red-800 flex items-center justify-center text-lg"><i class="fas fa-user-graduate"></i></span>
+                        <h2 class="text-base md:text-xl font-bold text-slate-800 roman-font">I. Trayectoria Académica</h2>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 icon-rotate transition-transform duration-300"></i>
+                </summary>
+                <div class="p-4 md:p-5 pt-0 pl-4 md:pl-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-sm text-slate-600">
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2 uppercase tracking-wider text-xs border-b pb-1">Formación</h3>
+                        <ul class="space-y-3 relative">
+                            <div class="absolute left-[5px] top-2 bottom-2 w-0.5 bg-slate-200"></div>
+                            <li class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-slate-300 border-2 border-white"></div>
+                                <div class="font-bold text-slate-800">Licenciado en Derecho (1997)</div><div class="text-xs">Universidad de Murcia</div>
+                                
+                            </li>
+                            <li class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-red-400 border-2 border-white"></div>
+                                <div class="font-bold text-slate-800">Doctor en Derecho (2012)</div>
+                                <div class="text-xs">Universidad de Murcia (Sobresaliente Cum Laude)</div>
+                              
+                            </li>
+                            <li class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-yellow-400 border-2 border-white"></div>
+                                <div class="font-bold text-slate-800">Mediador Mercantil (2015)</div>
+                                <div class="text-xs">Universidad Católica San Antonio (UCAM)</div>
+                              
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2 uppercase tracking-wider text-xs border-b pb-1">Carrera Docente</h3>
+                        <div class="space-y-3 relative">
+                            <div class="absolute left-[5px] top-2 bottom-2 w-0.5 bg-slate-200"></div>
+                           <div class="relative pl-6">
+    <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-slate-300 border-2 border-white"></div>
+    <div class="font-bold text-slate-700 text-xs">Profesor Asociado (2006 - 2013)</div>
+    <div class="text-[10px] text-slate-500">Universidad de Murcia</div>
+</div>
+<div class="relative pl-6">
+    <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-yellow-400 border-2 border-white"></div>
+    <div class="font-bold text-slate-700 text-xs">Profesor Contratado Doctor (2013 - 2017)</div>
+    <div class="text-[10px] text-slate-500">UCAM (Acreditado ANECA/DEI)</div>
+</div>
+<div class="relative pl-6">
+    <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-red-400 border-2 border-white"></div>
+    <div class="font-bold text-slate-700 text-xs">Profesor Ayudante Doctor (2017 - 2018)</div>
+    <div class="text-[10px] text-slate-500">Universidad de Murcia</div>
+</div>
+<div class="relative pl-6">
+    <div class="absolute left-[-2px] top-1 w-4 h-4 rounded-full bg-red-700 border-2 border-white shadow"></div>
+    <div class="font-bold text-slate-900 text-xs">Profesor Contratado Doctor (2018 - 2026)</div>
+    <div class="text-[10px] text-slate-500">Universidad de Murcia</div>
+</div>
+<div class="relative pl-6">
+    <div class="absolute left-[-2px] top-1 w-4 h-4 rounded-full bg-red-900 border-2 border-white shadow"></div>
+    <div class="font-bold text-slate-900 text-sm">Profesor Titular de Universidad (2026 - Act.)</div>
+    <div class="text-[10px] text-slate-500">Universidad de Murcia</div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+<details class="group bg-white">
+                <summary class="flex justify-between items-center p-4 md:p-5 hover:bg-slate-50">
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <span class="w-8 h-8 rounded-full bg-green-100 text-green-800 flex items-center justify-center text-lg"><i class="fas fa-chalkboard-teacher"></i></span>
+                        <h2 class="text-base md:text-xl font-bold text-slate-800 roman-font">II. Docencia</h2>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 icon-rotate transition-transform duration-300"></i>
+                </summary>
+                
+                <div class="p-4 md:p-5 pt-0 pl-4 md:pl-16">
+                    <div class="mb-6">
+                        <h3 class="font-bold text-slate-800 text-sm border-b pb-1 mb-2">Experiencia Docente</h3>
+                        <div class="text-xs text-slate-600 grid grid-cols-1 md:grid-cols-3 gap-2">
+                            <div class="p-2 bg-slate-50 rounded">
+                                <strong>UMU (Licenciatura, Grado, Postgrado):</strong><br>Derecho Romano, Derecho Romano Bilingüe, Oratoria, Argumentación Jurídica, Derecho Sanitario.
+                            </div>
+                            <div class="p-2 bg-slate-50 rounded">
+                                <strong>UCAM (Grado/Online/Máster):</strong><br>D. Procesal I, II y III, D. Civil, D. Romano, D. Deportivo.
+                            </div>
+                            <div class="p-2 bg-slate-50 rounded">
+                                <strong>UNIR (Postgrado):</strong><br>D. Civil y Mercantil (Máster Asesoría Fiscal).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="font-bold text-slate-800 text-sm border-b-2 border-green-600 pb-1 mb-3">Publicaciones y Materiales Docentes</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2008</span> <a href="PDFs/2008 - El estudio de las instituciones públicas romanas a través de sus fuentes, Diego .pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">El estudio de las instituciones públicas romanas a través de sus fuentes, Diego Marín. <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                           <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2010</span> <a href="PDFs/2010 - El Derecho romano como introducción al Derecho, Diego Marín (4ª Ed. 2023)..pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">El Derecho romano como introducción al Derecho, Diego Marín (4ª Ed. 2023). <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2010</span> <a href="PDFs/2026 - Lecciones de Derecho Romano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Lecciones de Derecho Romano (2026). <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2015</span> <a href="PDFs/2015 - Preguntas de autoevaluación para estudios jurídicos, Lefevre El Derecho..pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Preguntas de autoevaluación para estudios jurídicos, Lefevre El Derecho. <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2016</span> <a href="PDFs/2016 - Material Docente de Derecho Romano, Diego Marín..pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Material Docente de Derecho Romano, Diego Marín. <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2020</span> <a href="PDFs/2020 - La universidad española ante el siglo XXI..pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La universidad española ante el siglo XXI. <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2021</span> <a href="PDFs/2021 - La “introducción a las ciencias jurídicas” en el COU..., en Olimpiada constituci.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La “introducción a las ciencias jurídicas” en el COU..., en Olimpiada constitucional, Tirant Lo Blanch. <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2021</span> <a href="PDFs/2021 - Guión e ideas-fuerza de vídeo-tutoriales docentes... Innovación docente (Dykinso.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Guión e ideas-fuerza de vídeo-tutoriales docentes... Innovación docente (Dykinson). <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p></div>
+                            <div class="citation-box"><p class="font-semibold text-slate-800"><span class="year-badge">2025</span> <a href="PDFs/2021 - Las ramas del Derecho. Olimpiada constitucional..pdf" target="_blank" class="te
+                        </div>
+                    </div>
+
+  <div class="bg-slate-50 rounded p-4 border border-slate-200">
+                        <div class="flex flex-col sm:flex-row items-start gap-3">
+                             <div class="bg-blue-600 text-white p-2 rounded shrink-0 text-xs font-bold">REA</div>
+                             <div class="w-full">
+                                <p class="font-bold text-sm text-blue-900">Proyecto Ulpiano-IA (2025)</p>
+                                <p class="text-xs text-slate-600 mb-3">Diseño, desarrollo e implementación de un Recurso Educativo Abierto (REA) para la docencia del Derecho Romano.</p>
+                                
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <a href="https://derechoromano.netlify.app" target="_blank" class="bg-red-800 text-white px-3 py-1.5 rounded text-xs font-semibold hover:bg-red-900 transition-colors flex items-center gap-1.5 shadow-sm">
+                                        <i class="fas fa-gavel text-[10px]"></i> derecho-romano
+                                    </a>
+                                    
+                                    <a href="https://oratoria-um.netlify.app/" target="_blank" class="bg-red-800 text-white px-3 py-1.5 rounded text-xs font-semibold hover:bg-red-900 transition-colors flex items-center gap-1.5 shadow-sm">
+                                        <i class="fas fa-gavel text-[10px]"></i> oratoria
+                                    </a>
+                                    <a href="https://biblioulpiano.netlify.app/" target="_blank" class="bg-red-800 text-white px-3 py-1.5 rounded text-xs font-semibold hover:bg-red-900 transition-colors flex items-center gap-1.5 shadow-sm">
+                                        <i class="fas fa-gavel text-[10px]"></i> biblioteca
+                                    </a>
+                                </div>
+
+                                <div class="mt-4 pt-3 border-t border-slate-200 text-xs flex items-start gap-2">
+                                    <i class="fas fa-star text-amber-500 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-semibold text-slate-700">Reseña del Laboratorio con IA:</span>
+                                        <a href="https://skiller.education/la-voz-del-experto-el-genial-laboratorio-de-casos-romanos-impulsado-con-inteligencia-artificial-desde-murcia/?srsltid=AfmBOop0r9R6BWB2xYpCZm7el8BD4jMxKar8gC3xbGIcA8FRB6uhvaHw" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer" 
+                                           class="text-blue-700 hover:text-red-800 font-medium hover:underline">
+                                            «El genial Laboratorio de Casos Romanos impulsado con inteligencia artificial desde Murcia» (Diego Fierro, Skiller Academy)
+                                        </a>
+                                    </div>
+                                </div>
+
+                             </div>
+                        </div>
+                    </div>
+            </details>
+
+            <details class="group bg-white">
+                <summary class="flex justify-between items-center p-4 md:p-5 hover:bg-slate-50">
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-lg"><i class="fas fa-scroll"></i></span>
+                        <h2 class="text-base md:text-xl font-bold text-slate-800 roman-font">III. Investigación</h2>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 icon-rotate transition-transform duration-300"></i>
+                </summary>
+                
+                <div class="p-4 md:p-5 pt-0 pl-4 md:pl-16 space-y-3">
+                    
+                    <details class="nested-details bg-slate-50 rounded border border-slate-200">
+                        <summary class="p-3 text-slate-700 font-medium hover:bg-slate-100 flex justify-between text-sm">
+                            <span>1. Derecho Procesal Romano (Ejecución y Protección)</span>
+                            <i class="fas fa-plus text-xs mt-1 text-slate-400"></i>
+                        </summary>
+                        <div class="p-4 bg-white text-sm">
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2">Libros</h4>
+                            <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2013</span> <a href="PDFs/2013 - El embargo ejecutivo en el proceso cognitorio romano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">El embargo ejecutivo en el proceso cognitorio romano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Marcial Pons</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2024</span> <a href="PDFs/2024 - Iurisdictio en el proceso civil moderno.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Iurisdictio en el proceso civil moderno <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Tirant lo Blanch</p>
+                            </div>
+
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2 mt-4">Artículos y Capítulos</h4>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2007</span> <a href="PDFs/2007 - La protección civil frente a las agresiones medioambientales en Derecho Romano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La protección civil frente a las agresiones medioambientales en Derecho Romano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Jurídica de la Región de Murcia, 38</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2012</span> <a href="PDFs/2012 - La Ejecución De Sentencias Dinerarias En Las Partidas.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La Ejecución De Sentencias Dinerarias En Las Partidas <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista General de Derecho Romano, 19</p>
+                                <div class="translation-note"><i class="fas fa-globe"></i> Versión en búlgaro: <em>"Enforcement of monetary judgments in VII Partidas"</em> (Ius Romanum, 2019)</div>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2012</span> <a href="PDFs/2012 - La Protección Interdictal Del Dominio Público Y Su Influencia En El Interdicto D.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La Protección Interdictal Del Dominio Público Y Su Influencia En El Interdicto De Retener <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista General de Derecho Romano, 19</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2012</span> <a href="PDFs/2012 - La quiebra de la subasta en la extraordinaria cognitio.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La quiebra de la subasta en la extraordinaria cognitio <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Fundamenta Iuris, Universidad de Almería</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2013</span> <a href="PDFs/2013 - Algunos Elementos De Ejecución Personal En El Dominado.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Algunos Elementos De Ejecución Personal En El Dominado <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Internacional de Derecho Romano, 10</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2015</span> <a href="PDFs/2015 - Pretium Iustum En Derecho Clásico.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Pretium Iustum En Derecho Clásico <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Seminarios Complutenses de Derecho Romano</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2015</span> <a href="PDFs/2015 - Ejecución de sentencias en las Partidas pervivencia del modelo romano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Ejecución de sentencias en las Partidas: pervivencia del modelo romano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Estudios sobre las Partidas (RDUNED)</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2016</span> <a href="PDFs/2016 - Apuntes sobre la ejecución de créditos tributarios en Roma.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Apuntes sobre la ejecución de créditos tributarios en Roma <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista General de Derecho Romano, 26</p>
+                                <div class="translation-note"><i class="fas fa-globe"></i> Versión en inglés: <em>"Execution of Tax Credits in Rome"</em> (Journal on European History of Law, 2017)</div>
+                          </div>
+
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2021</span> <a href="PDFs/2021 - Actio publiciana and mancipatio.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Actio publiciana and mancipatio <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Journal on European History of Law, 12</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2021</span> <a href="PDFs/2021 - La protección del propietario pretorio en Derecho clásico y su recepción en el C.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La protección del propietario pretorio en Derecho clásico y su recepción en el Código Civil español <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista de Estudios Histórico Jurídicos, 43</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2026</span> <a href="PDFs/2026 - De la pignoris capio a la manu militari.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">De la pignoris capio a la manu militari: el retorno a la ejecución in specie en la extraordinaria cognitio<i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista de Estudios Histórico Jurídicos, 46</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="nested-details bg-slate-50 rounded border border-slate-200">
+                        <summary class="p-3 text-slate-700 font-medium hover:bg-slate-100 flex justify-between text-sm">
+                            <span>2. Derecho Postclásico</span>
+                            <i class="fas fa-plus text-xs mt-1 text-slate-400"></i>
+                        </summary>
+                        <div class="p-4 bg-white text-sm">
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2">Libros</h4>
+                             <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2014</span> <a href="PDFs/2014 - Rescripta Diocletiani Base de datos de las constituciones de Diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Rescripta Diocletiani: Base de datos de las constituciones de Diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Marcial Pons-Editum</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2014</span> <a href="PDFs/2014 - Estudios sobre la banca bizantina y otros trabajos sobre Derecho justinianeo.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Estudios sobre la banca bizantina y otros trabajos sobre Derecho justinianeo de Antonio Díaz Bautista <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Marcial Pons-Editum</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2016</span> <a href="PDFs/2016 - Glosario de las constituciones de Diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Glosario de las constituciones de Diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Iuris Universal, Murcia</p>
+                            </div>
+
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2 mt-4">Artículos y Capítulos</h4>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2010</span> <a href="PDFs/2010 - La responsabilidad por vicios futuros... en la legislación de Diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La responsabilidad por vicios futuros... en la legislación de Diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Estudios sobre Diocleciano, Dykinson</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2010</span> <a href="PDFs/2010 - La regla “res inter alios acta” en la legislación de Diocleciano....pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La regla “res inter alios acta” en la legislación de Diocleciano... <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Estudios sobre Diocleciano, Dykinson</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2012</span> <a href="PDFs/2012 - Las obligaciones  Los derechos reales  Índice de fuentes.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Las obligaciones / Los derechos reales / Índice de fuentes <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Conspectus Constitutionum Diocletiani, Dykinson</p>
+                            </div>
+                             <div class="citation-box">
+                              
+                           
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2014</span> <a href="PDFs/2014 - Antonio Díaz Bautista Y La Legislación Justinianea.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Antonio Díaz Bautista Y La Legislación Justinianea <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Internacional de Derecho Romano, 12</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2016</span> <a href="PDFs/2016 - Una delegatio en tiempos de Diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Una delegatio en tiempos de Diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Estudios en Homenaje a Armando Torrent, Dykinson</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2018</span> <a href="PDFs/2018 - La indignidad para suceder en los rescriptos de Diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La indignidad para suceder en los rescriptos de Diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Fundamentos del Derecho Sucesorio, Marcial Pons</p>
+                            </div>
+                            
+                        </div>
+                    </details>
+
+                    <details class="nested-details bg-slate-50 rounded border border-slate-200">
+                        <summary class="p-3 text-slate-700 font-medium hover:bg-slate-100 flex justify-between text-sm">
+                            <span>3. Sociedad y Fuentes Jurídicas</span>
+                            <i class="fas fa-plus text-xs mt-1 text-slate-400"></i>
+                        </summary>
+                        <div class="p-4 bg-white text-sm">
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2">Artículos y Capítulos</h4>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2011</span> <a href="PDFs/2011 - Propaganda Política En El Teatro Romano De Carthago Nova.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Propaganda Política En El Teatro Romano De Carthago Nova <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Internacional de Derecho Romano, 7</p>
+                                <div class="translation-note"><i class="fas fa-globe"></i> Versión en inglés: <em>"Confirmation of Augustus' power in images..."</em> (Ius Romanum, 2015)</div>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2012</span> <a href="PDFs/2012 - La tutela en los textos de Gayo.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La tutela en los textos de Gayo <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Gayo y el aprendizaje del Derecho Romano, Dykinson</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2013</span> <a href="PDFs/2013 - Magia, Superstición Y Religión En Los Rescriptos De Diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Magia, Superstición Y Religión En Los Rescriptos De Diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Internacional de Derecho Romano, 11</p>
+                            </div>
+             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2013</span> <a href="PDFs/2013 - Note About Diocletian’s Persecutions.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Note About Diocletian’s Persecutions <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Journal of European History Law, 2</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2014</span> <a href="PDFs/2014 - Ana Isabel Clemente Fernández La Auctoritas Romana (Recensión).pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Ana Isabel Clemente Fernández: La Auctoritas Romana (Recensión) <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista General de Derecho Romano</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2017</span> <a href="PDFs/2017 - La financiación del deporte en Roma. Hacia un derecho deportivo romano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La financiación del deporte en Roma. Hacia un derecho deportivo romano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">E-legal History Review, 24</p>
+                                <div class="translation-note">
+                                    <i class="fas fa-globe"></i> Versión en búlgaro: <em>"Financing of sport in Rome..."</em> (Ius Romanum, 2018)
+                                    <br><i class="fas fa-globe"></i> Versión en inglés: <em>"Notes about Sport Finance in Rome"</em> (Journal on European History of Law, 2015)
+                                </div>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2017</span> <a href="PDFs/2017 - Historia, significación y utilidad sociojurídica de la adrogatio y la adoptio.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Historia, significación y utilidad sociojurídica de la adrogatio y la adoptio <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Vergentis, 3</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2018</span> <a href="PDFs/2018 - The Low-Empire Society in Diocletian’s Legislation.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">The Low-Empire Society in Diocletian’s Legislation <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Journal on European History of Law, 9</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2019</span> <a href="PDFs/2019 - Lenguaje inclusivo en Roma Un apunte sobre la condición de la mujer....pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Lenguaje inclusivo en Roma: Un apunte sobre la condición de la mujer... <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista de Derecho Romano, Univ. Salvador</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2020</span> <a href="PDFs/2020 - Un estudio sobre la antigüedad la apología de Sócrates (Obarrio).pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Un estudio sobre la antigüedad: la apología de Sócrates (Obarrio) <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Internacional de Derecho Romano, 24</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2020</span> <a href="PDFs/2020 - La sociedad en los rescriptos de Diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La sociedad en los rescriptos de Diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Administración, Estado del Bienestar... (Univ. Jaume I)</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2022</span> <a href="PDFs/2022 - Una familia insólita Septimio Severo, hijo de Marco Aurelio.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Una familia insólita: Septimio Severo, hijo de Marco Aurelio <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Maternidades excéntricas... (Comares)</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2023</span> <a href="PDFs/2023 - La mujer en las constituciones de Constantino.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La mujer en las constituciones de Constantino <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Internacional de Derecho Romano 30</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2023</span> <a href="PDFs/2023 - Notas sobre el estatus de la mujer en el Imperio de Constantino.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Notas sobre el estatus de la mujer en el Imperio de Constantino <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: La proyección del Derecho Romano... (Boe)</p>
+                            </div>
+                            
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2023</span> <a href="PDFs/2023 - Aproximación al régimen legal del matrimonio por rapto a través de la historia.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Aproximación al régimen legal del matrimonio por rapto a través de la historia <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: El sujeto de derecho... (Comares)</p>
+                                <div class="translation-note">
+                                    <i class="fas fa-globe"></i> Versión en inglés: <em>"Approaching the Legal Regime of Consensual Abduction Through History"</em> (JEHL, 2023)
+                                </div>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2026</span> <a href="PDFs/2026 - El consentimiento sexual femenino en Roma.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">El consentimiento sexual femenino en Roma <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Violencia de género y tradición jurídica romana, Tirant lo Blanch</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="nested-details bg-slate-50 rounded border border-slate-200">
+                        <summary class="p-3 text-slate-700 font-medium hover:bg-slate-100 flex justify-between text-sm">
+                            <span>4. Unificación del Derecho Continental</span>
+                            <i class="fas fa-plus text-xs mt-1 text-slate-400"></i>
+                        </summary>
+                        <div class="p-4 bg-white text-sm">
+                             <h4 class="text-xs font-bold text-red-900 uppercase mb-2">Libros</h4>
+                            <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2015</span> <a href="PDFs/2015 - La actividad de la banca y los negocios mercantiles en el Mare Nostrum.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La actividad de la banca y los negocios mercantiles en el Mare Nostrum <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Aranzadi, Pamplona</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2019</span> <a href="PDFs/2019 - De la actio iniurarum a los daños punitivos.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">De la actio iniurarum a los daños punitivos <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Tirant lo Blanch</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2024</span> <a href="PDFs/2024 - Iurisdictio en el proceso civil moderno.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Iurisdictio en el proceso civil moderno <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Tirant lo Blanch</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-bold text-slate-800"><span class="year-badge">2026</span> <a href="PDFs/2026 - Bases del sistema jurídico continental.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Bases del sistema jurídico continental <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Tirant lo Blanch</p>
+                            </div>
+
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2 mt-4">Artículos y Capítulos</h4>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2015</span> <a href="PDFs/2015 - Negocios financieros en la legislación de diocleciano.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Negocios financieros en la legislación de diocleciano <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: La actividad de la banca... (Aranzadi)</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2017</span> <a href="PDFs/2017 - Origen y evolución de las garantías reales.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Origen y evolución de las garantías reales <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Antigüedad in progress (Cepoat)</p>
+                            </div>
+                           
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2019</span> <a href="PDFs/2019 - La obligación de entregar la cosa a dos o más personas diversas....pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La obligación de entregar la cosa a dos o más personas diversas... <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">E-legal History Review, 29</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2020</span> <a href="PDFs/2020 - En torno al principio periculum est emptoris.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">En torno al principio periculum est emptoris <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Jornadas romanísticas Homenaje Royo Arpó</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2020</span> <a href="PDFs/2020 - Tratamiento jurídico de las lesiones dolosas en la Edad Media.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Tratamiento jurídico de las lesiones dolosas en la Edad Media <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Glossae, European Journal of Legal History, 17</p>
+                            </div>
+
+                                                         <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2020</span> <a href="PDFs/2020 - Personal injury claims.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Personal injury claims <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Journal On European History of Law, 11</p>
+                            </div>
+                             <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2020</span> <a href="PDFs/2020 - Daños punitivos en la tradición jurídica continental.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Daños punitivos en la tradición jurídica continental <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Fundamentos romanísticos del Derecho Europeo (BOE)</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2021</span> <a href="PDFs/2021 - De la actio legis aquiliae a la responsabilidad civil extracontractual.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">De la actio legis aquiliae a la responsabilidad civil extracontractual <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">En: Homenaje al Prof. Dr. Roca Guillamón (Aranzadi)</p>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2025</span> <a href="PDFs/2025 - La actio de dolo y el stellionatus orígenes romanos y su influencia....pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La actio de dolo y el stellionatus: orígenes romanos y su influencia... <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista Internacional de Derecho Romano 35</p>
+                                <div class="translation-note text-slate-400">
+                                    <i class="fas fa-globe"></i> Versión en inglés: <em>"Evolution of fraud in spanish law"</em> (JEHL, 2025)
+                                </div>
+                            </div>
+                            <div class="citation-box">
+                                <p class="font-semibold text-slate-800"><span class="year-badge">2026</span> <a href="PDFs/2026 - La vigencia del modelo continental de riesgos periculum est emptoris, eficiencia.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">La vigencia del modelo continental de riesgos: periculum est emptoris, eficiencia económica y ecosistema digital <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p class="text-xs text-slate-500">Revista de Derecho Privado</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details class="nested-details bg-slate-50 rounded border border-slate-200">
+                        <summary class="p-3 text-slate-700 font-medium hover:bg-slate-100 flex justify-between text-sm">
+                            <span>5. Estancias de Investigación y Tesis Dirigidas</span>
+                            <i class="fas fa-plus text-xs mt-1 text-slate-400"></i>
+                        </summary>
+                        <div class="p-4 bg-white text-sm">
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2">Estancias de Investigación</h4>
+                            <ul class="text-xs text-slate-600 space-y-2 mb-4">
+                                <li>• <strong>Università degli Studi di Torino</strong> (Italia, 2019) - 3 meses. <em>Tema: Origen y evolución de la actio iniurarum.</em></li>
+                                <li>• <strong>Institut für Rechtsgeschichte</strong> (Freiburg, Alemania, 2011) - 1 mes. <em>Tema: Orígenes del embargo ejecutivo.</em></li>
+                                <li>• <strong>Università degli Studi di Pavía</strong> (Italia, 2010) - 2 meses. <em>Tema: Pignus in causa iudicati captum.</em></li>
+                            </ul>
+                            <h4 class="text-xs font-bold text-red-900 uppercase mb-2 mt-4">Tesis Doctorales Dirigidas</h4>
+                            <ul class="text-xs text-slate-600 space-y-2">
+                                <li>• <strong>Jorge Zapata López (2017)</strong>: Visión actualizada del régimen de legítimas... (UCAM). <em>Sobresaliente cum laude</em>.</li>
+                                <li>• <strong>Miguel A. Pouget Bastida (2017)</strong>: La cuestión prejudicial en Derecho europeo (UCAM). <em>Sobresaliente cum laude</em>.</li>
+                                <li>• <strong>Katrin Kanzenbach (2017)</strong>: The role of the compliance officer... (UCAM). <em>Sobresaliente cum laude</em>.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <h4 class="text-xs font-bold text-slate-800 uppercase mb-2"><i class="fas fa-project-diagram mr-1"></i> Proyectos I+D</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                             <div class="bg-blue-50 p-3 rounded border border-blue-100">
+                                <p class="font-bold text-blue-900 mb-1">Claves histórico-jurídicas de responsabilidad civil en Derecho de familia</p>
+                                <p class="text-slate-700">Min. Economía y Competitividad</p>
+                                <p class="text-slate-500">2017-2019 · IP: Ana Alemán Monterreal</p>
+                             </div>
+                             <div class="bg-blue-50 p-3 rounded border border-blue-100">
+                                <p class="font-bold text-blue-900 mb-1">Los principios del Derecho Romano en el Derecho europeo del siglo XXI</p>
+                                <p class="text-slate-700">Fundación BBVA</p>
+                                <p class="text-slate-500">2020-2022 · IP: Javier Carrascosa</p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            
+            <details class="group bg-white">
+                <summary class="flex justify-between items-center p-4 md:p-5 hover:bg-slate-50">
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <span class="w-8 h-8 rounded-full bg-yellow-100 text-yellow-800 flex items-center justify-center text-lg"><i class="fas fa-briefcase"></i></span>
+                        <h2 class="text-base md:text-xl font-bold text-slate-800 roman-font">IV. Gestión y Profesión</h2>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 icon-rotate transition-transform duration-300"></i>
+                </summary>
+                
+                <div class="p-4 md:p-5 pt-0 pl-4 md:pl-16">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="border-l-4 border-red-800 pl-3">
+                            <h3 class="font-bold text-slate-800 text-sm">Universidad de Murcia</h3>
+                            <div class="mt-1 space-y-1 text-xs text-slate-600">
+                                <p>• <strong>Vicedecano:</strong> Calidad y Comunicación, Facultad de Derecho (2018-2019) <a href="PDFs/vicedecano_umu.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Nombramiento <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p>• <strong>Coordinador:</strong> Máster de Abogacía, Sede Cartagena (2019-2022).</p> <a href="PDFs/master_umu.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Nombramiento <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                       
+                            </div>
+                        </div>
+                        <div class="border-l-4 border-yellow-500 pl-3">
+                            <h3 class="font-bold text-slate-800 text-sm">UCAM</h3>
+                            <div class="mt-1 space-y-1 text-xs text-slate-600">
+                                <p>• <strong>Vicedecano:</strong> Grado en Derecho (2015-2017).</p><a href="PDFs/vicedecano_ucam.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Nombramiento <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <p>• <strong>Director:</strong> Máster de Abogacía y Máster en Gestión Administrativa (2015-2017).</p>
+                                <a href="PDFs/abogacia_ucam.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Nombramiento <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                                <a href="PDFs/gestion_ucam.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Nombramiento <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-4 rounded border border-slate-200">
+                        <h3 class="font-bold text-slate-800 text-sm mb-2"><i class="fas fa-gavel mr-2 text-slate-500"></i>Experiencia Profesional</h3>
+                        <ul class="text-xs text-slate-600 space-y-2">
+                            <li>• <strong>Ejercicio de la Abogacía (1998 - 2014):</strong> Letrado ejerciente (ICAMUR).</li>
+                            <li>• <strong>Vocal de la Junta Electoral:</strong> Junta Electoral Regional de Murcia (2025 - Act.).</li><a href="PDFs/junta.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Nombramiento <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                            <li>• <strong>Asesoramiento Jurídico:</strong> Bufete Lola Montesan, Murcia (2026 - Act.).</li><a href="PDFs/rector.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Certificado <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                            <li>• <strong>Consultoría Externa:</strong> Alma Verde SL (2023 - 2024).</li></li><a href="PDFs/rector2.pdf" target="_blank" class="text-blue-700 hover:text-red-800 hover:underline font-bold" title="Abrir documento original">Certificado <i class="fas fa-file-pdf text-red-600 ml-1"></i></a></p>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+
+            <details class="group bg-white">
+                <summary class="flex justify-between items-center p-4 md:p-5 hover:bg-slate-50">
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <span class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center text-lg"><i class="fas fa-broadcast-tower"></i></span>
+                        <h2 class="text-base md:text-xl font-bold text-slate-800 roman-font">V. Transferencia</h2>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 icon-rotate transition-transform duration-300"></i>
+                </summary>
+                
+                <div class="p-4 md:p-5 pt-0 pl-4 md:pl-16 text-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-3 rounded">
+                            <p class="font-bold text-slate-800 mb-1">Divulgación y Actualidad</p>
+                            <ul class="text-xs text-slate-600 space-y-2">
+                                <li>• <strong>Radio:</strong> "Viva la Radio" (Onda Regional). Colaborador semanal.</li>
+                                <li>• <strong>Prensa:</strong> Artículos en <em>La Verdad, La Opinión</em> (2018-Act).</li>
+                                <li>• "¿Es el patinete eléctrico un ciclomotor?" (2018). <em>Diario La Ley</em>.</li>
+                                <li>• "Estado de alarma como medida de contención social" (2020). <em>Diario La Ley</em>.</li>
+                                <li>• GUÍA PRÁCTICA Efectos Jurídicos del Coronavirus (COVID-19), Wolters Kluwer, 2020.</li>
+                                <li>• "El puente de los espías. El intercambio de prisioneros..." (2020). <em>REDIC</em>.</li>
+                                <li>• "La cláusula Rebus sic stantibus en tiempos de pandemia" (2020). <em>Diario La Ley</em>.</li>
+                                <li>• "Johnny Depp y el Derecho Romano..." (2022). <em>Práctica Derecho Daños</em>.</li>
+                                <li>• "La prohibición de custodia exclusiva para el progenitor violento..." (2026). <em>Noticias Jurídicas</em>.</li>
+                                <li>• "Aún más sobre la doctrina Parot" (2012). <em>Generación Fénix</em>.</li>
+                            </ul>
+                        </div>
+                         <div class="bg-slate-50 p-3 rounded">
+                            <p class="font-bold text-slate-800 mb-1">Cultura y Sociedad</p>
+                            <ul class="text-xs text-slate-600 space-y-2">
+                                <li>• <strong>"El Evangelio de Gayo" (2026):</strong> Novela editada por Stella Gemella, Valencia.</li>
+                                <li>• <strong>"Dura lex, sed lex" (2018):</strong> Teatro histórico. Representada en Fiestas de Cartagineses y Romanos.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded col-span-1 md:col-span-2">
+                            <p class="font-bold text-slate-800 mb-1">Charlas y Conferencias de Divulgación</p>
+                            <ul class="text-xs text-slate-600 space-y-2">
+                                <li>• <strong>Olimpiadas Constitucionales:</strong> Conferencias sobre la Constitución en institutos de Torre Pacheco, Blanca, Mazarrón, Yecla, Puente Tocinos y La Alberca.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
